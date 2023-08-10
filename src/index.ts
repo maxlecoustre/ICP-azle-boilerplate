@@ -1,4 +1,4 @@
-import { $query, $update, Record, StableBTreeMap, Vec, Result, nat64, ic, Opt } from 'azle';
+import { $query, $update, Record, match, StableBTreeMap, Vec, Result, nat64, ic, Opt } from 'azle';
 import { v4 as uuidv4 } from 'uuid';
 
 /**
@@ -19,7 +19,7 @@ type MessagePayload = Record<{
     attachmentURL: string;
 }>
 
-const messageStorage = new StableBTreemap<string, Message>(0, 44, 1024);
+const messageStorage = new StableBTreeMap<string, Message>(0, 44, 1024);
 
 $query;
 export function getMessages(): Result<Vec<Message>, string> {
