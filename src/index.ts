@@ -1,4 +1,4 @@
-import { $query, $update, Record, StableBTreemap, Vec, Result, nat64, ic, Opt } from 'azle';
+import { $query, $update, Record, StableBTreeMap, Vec, Result, nat64, ic, Opt } from 'azle';
 import { v4 as uuidv4 } from 'uuid';
 
 /**
